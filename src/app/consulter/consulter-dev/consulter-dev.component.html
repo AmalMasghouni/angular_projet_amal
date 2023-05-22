@@ -1,0 +1,222 @@
+
+
+
+<div class="content-wrapper">
+  <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+      <div class="row">
+        <!-- Developpement -->
+          <div class="col-lg">
+            <div class="card mb-4">
+              <div class="row gy-3">
+                <div class="col-sm-5">
+                  <h5 class="card-header">Developpement</h5>
+                </div>
+                <div class="col-sm-5">
+                  <small class="fw-bold py-3 mb-4" style="color: green;"><span class="text-muted fw-light " >Etat: </span> {{dev.etatDev}}</small>
+                </div>
+                <div class="card-body">
+                  <div class="row gy-3">
+                    <div class="col-sm-4">
+                      <div class="demo-inline-spacing">
+                        <label>Nom Dev</label>
+                        <input [(ngModel)]="dev.nomDev" type="text" class="form-control"  placeholder="Nom Dev" />
+                      </div>
+                      <div class="demo-inline-spacing">
+                        <label>Version</label>
+                        <input [(ngModel)]="dev.maj"  type="text" class="form-control"  placeholder="Version" />
+                      </div>
+                      <div class="demo-inline-spacing">
+                        <label>DLL</label>
+                        <input [(ngModel)]="dev.nomDll"  type="text" class="form-control"  placeholder="DLL" />
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="demo-inline-spacing">
+                        <label>Site</label>
+                        <input [(ngModel)]="dev.idSite" type="text" class="form-control"  placeholder="Site" />
+                      </div>
+                      <div class="demo-inline-spacing">
+                          <label>Developpeur</label>
+                          <input [(ngModel)]="dev.utilisateur"  type="text" class="form-control"  placeholder="Developpeur" />
+                        </div>
+                        <div class="demo-inline-spacing">
+                          <label>Type Dev</label>
+                          <input [(ngModel)]="dev.typeDev" type="text" class="form-control"  placeholder="Type Dev" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="demo-inline-spacing">
+                        <label>Historique</label>
+                        <input  type="text" class="form-control"  placeholder="Historique" />
+                      </div>
+                      <div class="demo-inline-spacing">
+                        <label>Commentaire</label>
+                        <input  type="text" class="form-control" placeholder="Commentaire" />
+                      </div>
+                      <div class="demo-inline-spacing">
+                        <label>Bug</label>
+                        <input [(ngModel)]="dev.bug" type="text" class="form-control"  placeholder="Bug" />
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <h6>Validations</h6>
+                      <div class="demo-inline-spacing">
+                        <div class="col-sm-10" >
+                          <textarea class="form-control"  style="height: 150px; width: 350px;"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <h6>Fonction Developpée</h6>
+                      <div class="demo-inline-spacing">
+                        <div class="col-sm-10" >
+                          <textarea [(ngModel)]="dev.fonction"  class="form-control" style="height: 150px; width: 350px;"></textarea>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            <div class="row justify-content-end">
+              <div class="col-sm-10">
+                  <button type="submit" class="btn btn-primary"[routerLink]="['/modifier-dev',dev.n]" >Modifier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- Voitures-->
+<div class="row">
+  <div class="col-md-6">
+  <div class="card mb-4">
+  <div class="col-xl-6">
+    <h5 class="card-header">Voitures </h5>
+    <div class="card-body">
+      <div class="row gy-3">
+        <div class="col-sm-4">
+    <div class="demo-inline-spacing">
+      <div class="col-sm-10" >
+        <textarea [(ngModel)]="dev.vehidList"class="form-control" style="height: 150px; width: 350px;"></textarea>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary" routerLink="">Modifier</button>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="col-md-6">
+    <div class="card mb-4">
+    <div class="col-xl-8">
+      <h5 class="card-header">Menu </h5>
+      <div class="col-sm-5">
+        <small class="fw-bold py-3 mb-4" style="color: green;"><span class="text-muted fw-light " >Etat: </span> Input groups</small>
+      </div>
+      <div class="card-body">
+        <div class="row mb-10">
+          <div class="col sm-10">
+            <div class="demo-inline">
+              <label>Demande Menu</label>
+              <input [(ngModel)]="dev.menu"  type="text" class="form-control"  placeholder="Nom Dev" />
+            </div>
+            <div class="demo-inline-spacing">
+              <label>Nom Ecu</label>
+              <input [(ngModel)]="dev.ecu" type="text" class="form-control"  placeholder="Version" />
+            </div>
+
+              <div class="demo-inline-spacing">
+                <button type="button" class="btn btn-outline-primary" [routerLink]="['/modifier-menu',dev.idmenu]">Modifier</button>
+                <button type="button" class="btn btn-outline-secondary">Génerer en Xml</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+</div>
+  </div>
+<div class="row">
+        <!-- Cahier Des Charges -->
+  <div class="col-md-6">
+            <div class="card mb-4">
+              <h5 class="card-header">Cahier Des Charges</h5>
+
+              <div class="card-body demo-vertical-spacing demo-only-element">
+                <small class="fw-bold py-3 mb-4" style="color: green;"><span class="text-muted fw-light " >Etat: </span> {{dev.etatCdc}}</small>
+                <div class="row gy-3">
+                <div class="col-sm-4">
+                <div class="demo-inline-spacing">
+                  <label>Nom</label>
+                  <input [(ngModel)]="dev.cdc" type="text" class="form-control"  placeholder="Nom CDC" />
+                </div>
+                <div class="demo-inline-spacing">
+                  <label>Reference Actia</label>
+                  <input [(ngModel)]="dev.refCDCActia"  type="text" class="form-control"  placeholder="Ref Actia" />
+                </div>
+                <div class="demo-inline-spacing">
+                  <label>Data Création</label>
+                  <input [(ngModel)]="dev.datacdc"  type="date" class="form-control"  />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="demo-inline-spacing">
+                  <label>Source de données</label>
+                  <input [(ngModel)]="dev.source"   type="text" class="form-control"  placeholder="Source de données" />
+                </div>
+                <div class="demo-inline-spacing">
+                  <label>Indice</label>
+                  <input [(ngModel)]="dev.indice"  type="text" class="form-control"  placeholder="Indice" />
+                </div>
+                <div class="demo-inline-spacing">
+                  <label>Site</label>
+                  <input [(ngModel)]="dev.siteCDC"  type="text" class="form-control"  placeholder="Site" />
+                </div>
+              </div>
+
+              <div class="demo-inline-spacing">
+                <button type="button" class="btn btn-outline-primary" routerLink="/ajout-cdc">Créer un nouveau CDC</button>
+                <button type="button" class="btn btn-outline-secondary">Sélectionner un nouveau CDC</button>
+                <div class="row justify-content-end">
+                <button type="button" class="btn btn-outline-primary" [routerLink]="['/modifier-cdc',dev.idcdc]">Consulter/Modifier CDC</button>
+            </div>
+          </div>
+            </div>
+
+              </div>
+            </div>
+  </div>
+        <!-- Adaptateurs nécessaires au diagbostic -->
+  <div class="col-md-6">
+            <div class="card mb-4">
+              <h5 class="card-header">Adaptateurs nécessaires au diagbostic</h5>
+
+              <div class="card-body demo-vertical-spacing demo-only-element">
+                <small class="fw-bold py-3 mb-4" style="color: green;"><span class="text-muted fw-light " >Etat: </span> Input groups</small>
+                <div class="col-sm-10" >
+                  <textarea class="form-control" ></textarea>
+                </div>
+                <div class="row justify-content-end">
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary" >Modifier</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  </div>
+</div>
+
+</div>
+      <!-- / Content -->
+  <div class="content-backdrop fade"></div>
+  <!-- Content wrapper -->
+</div>
+
+
+
